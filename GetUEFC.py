@@ -46,23 +46,23 @@ class UEFC:
         # TAPER, DBMAX, ETC YOU SHOULD NOT NEED TO CHANGE THIS CLASS.
 
         # Geometry parameters
-        self.taper = 0.5  # taper ratio
-        self.dihedral = 10.0  # Wing dihedral (degrees)
-        self.tau = 0.12  # thickness-to-chord ratio
+        self.taper = taper  # taper ratio
+        self.dihedral = dihedral  # Wing dihedral (degrees)
+        self.tau = tau  # thickness-to-chord ratio
 
         # Aerodynamic parameters
-        self.CLdes = 0.85  # maximum CL wing will be designed to fly at (in cruise)
-        self.e0 = 1.0  # Span efficiency for straight level flight
+        self.CLdes = CLdes  # maximum CL wing will be designed to fly at (in cruise)
+        self.e0 = e0  # Span efficiency for straight level flight
 
         # Wing bending and material properties
-        self.dbmax = 0.1  # tip displacement bending constraint
-        self.rhofoam = 25.5  # kg/m^3. Dow Blue foam (low load)
-        self.Efoam = 12.0e6  # Pa.     Dow Blue foam (low load)
+        self.dbmax = dbmax  # tip displacement bending constraint
+        self.rhofoam = rhofoam  # kg/m^3. Dow Blue foam (low load)
+        self.Efoam = Efoam  # Pa.     Dow Blue foam (low load)
 
         # Other modeling parameters
-        self.rho = 1.225  # air density kg/m^3
-        self.mu = 1.789e-5  # dynamic viscosity of air N s/m^2
-        self.g = 9.81  # gravity, m/s^2
+        self.rho = rho  # air density kg/m^3
+        self.mu = mu  # dynamic viscosity of air N s/m^2
+        self.g = g  # gravity, m/s^2
 
     # opt_vars is a vector representing the optimization variables
     # opt_vars[0]: Load factor (-)
