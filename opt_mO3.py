@@ -106,5 +106,5 @@ if __name__ == "__main__":
     print("Turn radius:  %0.2f m" % opt_vars_maxmO3[1])
     print("Payload mass: %0.0f g" % opt_vars_maxmO3[2])
     
-    print("mpay Omega^3: %0.0f g/s^3" % mO3_max)
+    print("Omega^3: %0.0f g/s^3" % mO3_max)
     

@@ -15,9 +15,11 @@ from GetUEFC        import UEFC
 from opt_mO3        import opt_mO3
 from report_opt_mO3 import report_opt_mO3
 
+from time import process_time
+
 if __name__ == "__main__":
-    
-    aircraft = UEFC()
+    t1_start = process_time() 
+    aircraft = UEFC(taper = .7, tau = .1, CLdes = .8, dbmax = .1 )
     
     nAR = nS = 41
     
@@ -70,6 +72,9 @@ if __name__ == "__main__":
     print("\n")
     print("Maximum mO3 aircraft characteristics:")
     print("----------------------------------------------")
+    print(ARopt, Sopt)
+    t1_stop = process_time()
+    print("Elapsed time:", t1_stop, t1_start, t1_stop-t1_start) 
     report_opt_mO3(aircraft, ARopt, Sopt)    
     
     
@@ -192,4 +197,3 @@ if __name__ == "__main__":
     """
     
     plt.show(block=True)
-    
