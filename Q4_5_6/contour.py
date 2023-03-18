@@ -27,12 +27,12 @@ def gen_graph(file, title):
     levels = np.linspace(np.min(mO3[mO3 > 0]), np.max(mO3), 21)
     cs = ax.contour(T, L, mO3, levels=levels, linewidths=0.5)
     plt.clabel(cs, inline=1, fontsize=12)
-    ax.set_xlabel(r'$\tau$')
-    ax.set_ylabel('$\lambda$')
+    ax.set_xlabel(r'$\tau$ ($\frac{t}{c}$)')
+    ax.set_ylabel(r'$\lambda$ ($\frac{c_t}{c_r}$)')
     ax.set_title(title)
-    plt.show()
 
 
-gen_graph('Optimal_ARS_3.txt', '$m_{\mathrm{pay}}\Omega^{3}$ Contour Plot (Question 4)')
-gen_graph('Optimal_ARS_2.txt', '$m_{\mathrm{pay}}\Omega^{3}$ Contour Plot (Question 5)')
-gen_graph('Optimal_ARS_1.txt', '$m_{\mathrm{pay}}\Omega^{3}$ Contour Plot (Question 6)')
+gen_graph('Optimal_ARS_3.txt', r'$m_{\mathrm{pay}}\Omega^3$ $(\frac{\mathrm{g}}{\mathrm{s}^3})$ Contour Plot (Question 4)')
+gen_graph('Optimal_ARS_2.txt', r'$m_{\mathrm{pay}}\Omega^3$ $(\frac{\mathrm{g}}{\mathrm{s}^3})$ Contour Plot (Question 5)')
+gen_graph('Optimal_ARS_1.txt', r'$m_{\mathrm{pay}}\Omega^3$ $(\frac{\mathrm{g}}{\mathrm{s}^3})$ Contour Plot (Question 6)')
+plt.show()
