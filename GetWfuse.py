@@ -5,9 +5,9 @@ def GetWfuse(UEFC, AR, S):
     # mfusel, mfuseS, b0, and S0
     
     # Calculate fuselage weight from UEFC parameters and S and AR
-    mfuse0 = 0.185  # fixed mass (kg)
-    mfusel = 0.060  # span (length) dependent mass (kg)
-    mfuseS = 0.045  # wing area dependent mass (kg)
+    mfuse0 = 0.247  # fixed mass (kg)
+    mfusel = 0.045  # span (length) dependent mass (kg)
+    mfuseS = 0.026  # wing area dependent mass (kg)
     
     S0 = 0.225  # Wing area for which mfusel and mfuseS were calculated (m^2)
     b0 = 1.5    # Wingspan for which mfusel and mfuseS were calculated (m)
